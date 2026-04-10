@@ -893,9 +893,7 @@ section {
   transition: opacity 0.3s 1.2s;
 }
 
-.skill-bar-item.animate .skill-bar-fill {
-  width: attr(data-level);
-}
+/* Width is set via JS: fill.style.width = bar.getAttribute('data-level') */
 
 .skill-bar-item.animate .skill-bar-fill::after {
   opacity: 1;

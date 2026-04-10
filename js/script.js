@@ -10,6 +10,10 @@
    1. DOM Ready Helper
    ============================================================ */
 document.addEventListener('DOMContentLoaded', () => {
+  // Set copyright year dynamically
+  const yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
   initParticles();
   initTypingEffect();
   initNavbar();
