@@ -1,79 +1,580 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Satyajit | Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Satyajit — Robotics Engineer, ROS2 Developer &amp; Computer Vision Enthusiast." />
+  <meta name="author" content="Satyajit" />
+  <meta property="og:title" content="Satyajit | Robotics Engineer &amp; Developer" />
+  <meta property="og:description" content="Portfolio of Satyajit — Robotics, ROS2, Computer Vision, ML Research." />
+  <meta property="og:type" content="website" />
+  <title>Satyajit | Robotics Engineer &amp; Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <h2 class="logo">Satyajit</h2>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#research">Research</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <h1>Hi, I'm Satyajit 👋</h1>
-            <p>Robotics Enthusiast | Mathematics Explorer | Engineering Innovator</p>
-            <a href="#projects" class="btn">View My Work</a>
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <a href="#home" aria-label="Go to home">S.</a>
+      </div>
+      <ul class="nav-links" role="list">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- Hero -->
+    <section id="home" aria-label="Hero">
+      <canvas id="particles" aria-hidden="true"></canvas>
+      <div class="hero-bg-gradient" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="hero-greeting">Hello, World! 👋</p>
+        <h1 class="hero-name">I'm <span class="gradient-text">Satyajit</span></h1>
+        <p class="hero-subtitle">
+          <span class="typed-wrapper">
+            <span id="typed-text"></span><span class="cursor" aria-hidden="true"></span>
+          </span>
+        </p>
+        <p class="hero-description">
+          Passionate about building intelligent robotic systems, autonomous navigation,
+          and bridging the gap between mathematical theory and real-world engineering.
+          Currently exploring ROS2, CUDA-accelerated perception, and AI-driven control systems.
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">
+            <i class="fa-solid fa-rocket" aria-hidden="true"></i> View My Work
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i> Download CV
+          </a>
         </div>
+      </div>
+      <div class="scroll-indicator" aria-hidden="true">
+        <span>scroll</span>
+        <div class="scroll-arrow"></div>
+      </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>I'm passionate about robotics, mathematical applications, and engineering solutions. My work focuses on...</p>
+    <!-- About -->
+    <section id="about" class="section-padding" aria-label="About">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Get to know me</span>
+          <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
         </div>
-    </section>
+        <div class="about-grid">
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2>Featured Projects</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <h3>Project Title</h3>
-                    <p>Description</p>
-                    <a href="#">View Project →</a>
+          <div class="reveal-left">
+            <div class="profile-card glass">
+              <div class="profile-avatar" aria-hidden="true">S</div>
+              <h3 class="profile-name">Satyajit</h3>
+              <p class="profile-role">Robotics Engineer &amp; ROS2 Developer</p>
+              <div class="profile-stats">
+                <div class="stat-item">
+                  <div class="stat-value">2+</div>
+                  <div class="stat-label">Years Exp.</div>
                 </div>
-                <!-- Add more project cards -->
+                <div class="stat-item">
+                  <div class="stat-value">10+</div>
+                  <div class="stat-label">Projects</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-value">5+</div>
+                  <div class="stat-label">Publications</div>
+                </div>
+              </div>
+              <div class="profile-links">
+                <a href="https://github.com/HSatyajit95" class="profile-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+                  <i class="fa-brands fa-github" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/hsatyajit95" class="profile-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+                  <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                </a>
+                <a href="mailto:satyajit@example.com" class="profile-link" aria-label="Send email">
+                  <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                </a>
+                <a href="https://twitter.com/HSatyajit95" class="profile-link" target="_blank" rel="noopener noreferrer" aria-label="Twitter profile">
+                  <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+                </a>
+              </div>
             </div>
+          </div>
+
+          <div class="about-right reveal-right">
+            <h3>Building the <span class="gradient-text">Future</span> of Robotics</h3>
+            <p class="about-description">
+              I'm a robotics engineer with a deep passion for autonomous systems and intelligent machines.
+              My work sits at the intersection of software engineering, mathematics, and AI — from
+              designing SLAM pipelines accelerated on GPUs to developing ROS2-based navigation stacks.
+              <br /><br />
+              I enjoy exploring the elegance of mathematics and its applications in optimization,
+              signal processing, and control theory. The best solutions come from first-principles
+              thinking combined with cutting-edge tooling.
+            </p>
+            <div class="timeline" role="list" aria-label="Experience timeline">
+              <article class="timeline-item" role="listitem">
+                <div class="timeline-dot" aria-hidden="true"></div>
+                <p class="timeline-period">2023 — Present</p>
+                <h4 class="timeline-title">Robotics Software Engineer</h4>
+                <p class="timeline-org">Autonomous Systems Research Lab</p>
+              </article>
+              <article class="timeline-item" role="listitem">
+                <div class="timeline-dot" aria-hidden="true"></div>
+                <p class="timeline-period">2022 — 2023</p>
+                <h4 class="timeline-title">ROS2 Developer Intern</h4>
+                <p class="timeline-org">Embedded Robotics Startup</p>
+              </article>
+              <article class="timeline-item" role="listitem">
+                <div class="timeline-dot" aria-hidden="true"></div>
+                <p class="timeline-period">2021 — 2022</p>
+                <h4 class="timeline-title">Research Assistant — Computer Vision</h4>
+                <p class="timeline-org">University Perception Lab</p>
+              </article>
+            </div>
+            <p class="tech-stack-title">Core Tech Stack</p>
+            <div class="tech-grid stagger">
+              <span class="tech-badge"><i class="fa-brands fa-python" aria-hidden="true"></i> Python</span>
+              <span class="tech-badge"><i class="fa-solid fa-code" aria-hidden="true"></i> C++</span>
+              <span class="tech-badge"><i class="fa-solid fa-robot" aria-hidden="true"></i> ROS2</span>
+              <span class="tech-badge"><i class="fa-solid fa-calculator" aria-hidden="true"></i> MATLAB</span>
+              <span class="tech-badge"><i class="fa-solid fa-eye" aria-hidden="true"></i> OpenCV</span>
+              <span class="tech-badge"><i class="fa-solid fa-brain" aria-hidden="true"></i> TensorFlow</span>
+              <span class="tech-badge"><i class="fa-solid fa-fire" aria-hidden="true"></i> PyTorch</span>
+              <span class="tech-badge"><i class="fa-brands fa-linux" aria-hidden="true"></i> Linux</span>
+              <span class="tech-badge"><i class="fa-solid fa-microchip" aria-hidden="true"></i> CUDA</span>
+              <span class="tech-badge"><i class="fa-brands fa-git-alt" aria-hidden="true"></i> Git</span>
+            </div>
+          </div>
+
         </div>
+      </div>
     </section>
 
-    <!-- Research Section -->
-    <section id="research" class="research">
-        <div class="container">
-            <h2>Research & Publications</h2>
-            <!-- Add research items -->
+    <!-- Projects -->
+    <section id="projects" class="section-padding bg-grid" aria-label="Projects">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">What I've built</span>
+          <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+          <p class="section-subtitle">A selection of robotics, computer vision, and research engineering projects.</p>
         </div>
+        <div class="projects-grid stagger">
+
+          <article class="project-card reveal">
+            <div class="project-card-top"></div>
+            <div class="project-card-body">
+              <div class="project-icon"><i class="fa-solid fa-link" aria-hidden="true"></i></div>
+              <h3 class="project-title">IP Chain — IUWT</h3>
+              <p class="project-desc">Blockchain-based intellectual property protection using Undecimated Wavelet Transform for robust digital fingerprinting and provenance tracking.</p>
+              <div class="project-tags">
+                <span class="project-tag">Python</span>
+                <span class="project-tag">Blockchain</span>
+                <span class="project-tag">Cryptography</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/HSatyajit95" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="IP Chain on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
+                <a href="#" class="project-link" aria-label="IP Chain demo"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-card-top"></div>
+            <div class="project-card-body">
+              <div class="project-icon"><i class="fa-solid fa-route" aria-hidden="true"></i></div>
+              <h3 class="project-title">ROS2 Navigation Stack</h3>
+              <p class="project-desc">Autonomous robot navigation using ROS2 and Nav2 with custom behavior trees, obstacle avoidance, and dynamic map updates via costmap layers.</p>
+              <div class="project-tags">
+                <span class="project-tag">ROS2</span>
+                <span class="project-tag">C++</span>
+                <span class="project-tag">Python</span>
+                <span class="project-tag">SLAM</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/HSatyajit95" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="ROS2 Navigation on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
+                <a href="#" class="project-link" aria-label="ROS2 Navigation demo"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-card-top"></div>
+            <div class="project-card-body">
+              <div class="project-icon"><i class="fa-solid fa-video" aria-hidden="true"></i></div>
+              <h3 class="project-title">Computer Vision Pipeline</h3>
+              <p class="project-desc">Real-time object detection and multi-target tracking pipeline leveraging YOLOv8 and ByteTrack on an embedded edge device.</p>
+              <div class="project-tags">
+                <span class="project-tag">OpenCV</span>
+                <span class="project-tag">Python</span>
+                <span class="project-tag">TensorFlow</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/HSatyajit95" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="CV Pipeline on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
+                <a href="#" class="project-link" aria-label="CV Pipeline demo"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-card-top"></div>
+            <div class="project-card-body">
+              <div class="project-icon"><i class="fa-solid fa-map-location-dot" aria-hidden="true"></i></div>
+              <h3 class="project-title">CUDA-Accelerated SLAM</h3>
+              <p class="project-desc">GPU-accelerated simultaneous localization and mapping leveraging CUDA kernels for parallel point-cloud processing and loop closure detection.</p>
+              <div class="project-tags">
+                <span class="project-tag">CUDA</span>
+                <span class="project-tag">C++</span>
+                <span class="project-tag">ROS</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/HSatyajit95" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="CUDA SLAM on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
+                <a href="#" class="project-link" aria-label="CUDA SLAM demo"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-card-top"></div>
+            <div class="project-card-body">
+              <div class="project-icon"><i class="fa-solid fa-square-root-variable" aria-hidden="true"></i></div>
+              <h3 class="project-title">Mathematical Optimization Toolkit</h3>
+              <p class="project-desc">A library of numerical methods and optimization algorithms including gradient descent variants, Newton's method, and constrained solvers.</p>
+              <div class="project-tags">
+                <span class="project-tag">MATLAB</span>
+                <span class="project-tag">Python</span>
+                <span class="project-tag">NumPy</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/HSatyajit95" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="Optimization Toolkit on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
+                <a href="#" class="project-link" aria-label="Optimization Toolkit demo"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-card-top"></div>
+            <div class="project-card-body">
+              <div class="project-icon"><i class="fa-solid fa-helicopter" aria-hidden="true"></i></div>
+              <h3 class="project-title">Autonomous Drone Control</h3>
+              <p class="project-desc">PID and model predictive control framework for UAV autonomous flight with trajectory optimization and real-time state estimation.</p>
+              <div class="project-tags">
+                <span class="project-tag">Python</span>
+                <span class="project-tag">ROS2</span>
+                <span class="project-tag">Control Theory</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/HSatyajit95" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="Drone Control on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
+                <a href="#" class="project-link" aria-label="Drone Control demo"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Demo</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Get In Touch</h2>
-            <p>Email: your-email@example.com</p>
-            <ul class="social-links">
-                <li><a href="https://github.com/HSatyajit95">GitHub</a></li>
-                <li><a href="#">LinkedIn</a></li>
+    <!-- Skills -->
+    <section id="skills" class="section-padding" aria-label="Skills">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">My expertise</span>
+          <h2 class="section-title">Skills &amp; <span class="gradient-text">Technologies</span></h2>
+          <p class="section-subtitle">A snapshot of the tools and technologies I work with most.</p>
+        </div>
+        <div class="skills-grid">
+
+          <div class="reveal-left">
+            <div class="skill-bars-list">
+              <div class="skill-bar-item" data-level="90%">
+                <div class="skill-bar-header"><span class="skill-name">Python</span><span class="skill-percent">90%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
+              </div>
+              <div class="skill-bar-item" data-level="85%">
+                <div class="skill-bar-header"><span class="skill-name">C++</span><span class="skill-percent">85%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
+              </div>
+              <div class="skill-bar-item" data-level="88%">
+                <div class="skill-bar-header"><span class="skill-name">ROS / ROS2</span><span class="skill-percent">88%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
+              </div>
+              <div class="skill-bar-item" data-level="80%">
+                <div class="skill-bar-header"><span class="skill-name">MATLAB</span><span class="skill-percent">80%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
+              </div>
+              <div class="skill-bar-item" data-level="85%">
+                <div class="skill-bar-header"><span class="skill-name">Computer Vision</span><span class="skill-percent">85%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
+              </div>
+              <div class="skill-bar-item" data-level="78%">
+                <div class="skill-bar-header"><span class="skill-name">Machine Learning</span><span class="skill-percent">78%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
+              </div>
+              <div class="skill-bar-item" data-level="75%">
+                <div class="skill-bar-header"><span class="skill-name">CUDA / GPU Computing</span><span class="skill-percent">75%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
+              </div>
+              <div class="skill-bar-item" data-level="92%">
+                <div class="skill-bar-header"><span class="skill-name">Linux / Ubuntu</span><span class="skill-percent">92%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="reveal-right">
+            <p class="tech-cloud-title">Technology Ecosystem</p>
+            <div class="tech-cloud">
+              <div class="tech-cloud-item"><i class="fa-brands fa-python" aria-hidden="true"></i><span>Python</span></div>
+              <div class="tech-cloud-item"><i class="fa-solid fa-code" aria-hidden="true"></i><span>C++</span></div>
+              <div class="tech-cloud-item"><i class="fa-solid fa-robot" aria-hidden="true"></i><span>ROS2</span></div>
+              <div class="tech-cloud-item"><i class="fa-solid fa-microchip" aria-hidden="true"></i><span>CUDA</span></div>
+              <div class="tech-cloud-item"><i class="fa-solid fa-eye" aria-hidden="true"></i><span>OpenCV</span></div>
+              <div class="tech-cloud-item"><i class="fa-solid fa-brain" aria-hidden="true"></i><span>TensorFlow</span></div>
+              <div class="tech-cloud-item"><i class="fa-solid fa-fire" aria-hidden="true"></i><span>PyTorch</span></div>
+              <div class="tech-cloud-item"><i class="fa-brands fa-linux" aria-hidden="true"></i><span>Linux</span></div>
+              <div class="tech-cloud-item"><i class="fa-brands fa-git-alt" aria-hidden="true"></i><span>Git</span></div>
+              <div class="tech-cloud-item"><i class="fa-brands fa-docker" aria-hidden="true"></i><span>Docker</span></div>
+              <div class="tech-cloud-item"><i class="fa-solid fa-calculator" aria-hidden="true"></i><span>MATLAB</span></div>
+              <div class="tech-cloud-item"><i class="fa-solid fa-map-location-dot" aria-hidden="true"></i><span>SLAM</span></div>
+              <div class="tech-cloud-item"><i class="fa-solid fa-chart-line" aria-hidden="true"></i><span>NumPy</span></div>
+              <div class="tech-cloud-item"><i class="fa-solid fa-table" aria-hidden="true"></i><span>Pandas</span></div>
+              <div class="tech-cloud-item"><i class="fa-solid fa-diagram-project" aria-hidden="true"></i><span>Nav2</span></div>
+              <div class="tech-cloud-item"><i class="fa-solid fa-vials" aria-hidden="true"></i><span>Gazebo</span></div>
+              <div class="tech-cloud-item"><i class="fa-solid fa-terminal" aria-hidden="true"></i><span>Bash</span></div>
+              <div class="tech-cloud-item"><i class="fa-solid fa-cubes" aria-hidden="true"></i><span>CMake</span></div>
+              <div class="tech-cloud-item"><i class="fa-solid fa-gears" aria-hidden="true"></i><span>MoveIt</span></div>
+              <div class="tech-cloud-item"><i class="fa-solid fa-wave-square" aria-hidden="true"></i><span>PCL</span></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Research -->
+    <section id="research" class="section-padding bg-grid" aria-label="Research">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Academic work</span>
+          <h2 class="section-title">Research &amp; <span class="gradient-text">Publications</span></h2>
+          <p class="section-subtitle">Peer-reviewed papers and ongoing research across robotics, computer vision, signal processing, and blockchain.</p>
+        </div>
+        <div class="research-grid stagger">
+
+          <article class="research-card reveal">
+            <span class="research-type">Conference Paper</span>
+            <h3 class="research-title">Blockchain-Based Intellectual Property Protection Using Undecimated Wavelet Transform Fingerprinting</h3>
+            <p class="research-meta">Satyajit et al. · IEEE ICRA · 2024</p>
+            <p class="research-abstract">We propose a novel framework combining the IUWT with a permissioned blockchain ledger to create tamper-proof provenance records for digital artifacts, demonstrating robustness against common forgery attacks.</p>
+            <div class="research-tags">
+              <span class="research-tag">Blockchain</span>
+              <span class="research-tag">Signal Processing</span>
+              <span class="research-tag">Cryptography</span>
+            </div>
+            <div class="research-links">
+              <a href="#" class="research-link" aria-label="PDF"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i> PDF</a>
+              <a href="#" class="research-link" aria-label="DOI"><i class="fa-solid fa-link" aria-hidden="true"></i> DOI</a>
+            </div>
+          </article>
+
+          <article class="research-card reveal">
+            <span class="research-type">Journal Article</span>
+            <h3 class="research-title">CUDA-Accelerated LiDAR SLAM for Real-Time Autonomous Navigation in Unstructured Environments</h3>
+            <p class="research-meta">Satyajit et al. · IEEE RA-L · 2023</p>
+            <p class="research-abstract">A GPU-parallel LiDAR SLAM system achieving 10× speed-up over CPU baselines while maintaining state-of-the-art mapping accuracy on KITTI and Mulran benchmarks.</p>
+            <div class="research-tags">
+              <span class="research-tag">Robotics</span>
+              <span class="research-tag">CUDA</span>
+              <span class="research-tag">SLAM</span>
+            </div>
+            <div class="research-links">
+              <a href="#" class="research-link" aria-label="PDF"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i> PDF</a>
+              <a href="#" class="research-link" aria-label="DOI"><i class="fa-solid fa-link" aria-hidden="true"></i> DOI</a>
+            </div>
+          </article>
+
+          <article class="research-card reveal">
+            <span class="research-type">Workshop Paper</span>
+            <h3 class="research-title">Robust Multi-Target Tracking Under Occlusion Using Graph Neural Networks and Kalman Filtering</h3>
+            <p class="research-meta">Satyajit et al. · CVPR Workshop · 2023</p>
+            <p class="research-abstract">A GNN-based affinity model trained end-to-end with a differentiable Kalman filter for multi-target tracking, improving MOTA scores on MOT17 by 4.2 pp under heavy occlusion.</p>
+            <div class="research-tags">
+              <span class="research-tag">Computer Vision</span>
+              <span class="research-tag">Deep Learning</span>
+              <span class="research-tag">Tracking</span>
+            </div>
+            <div class="research-links">
+              <a href="#" class="research-link" aria-label="PDF"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i> PDF</a>
+              <a href="#" class="research-link" aria-label="DOI"><i class="fa-solid fa-link" aria-hidden="true"></i> DOI</a>
+            </div>
+          </article>
+
+          <article class="research-card reveal">
+            <span class="research-type">Preprint</span>
+            <h3 class="research-title">Model Predictive Control with Neural-Network Learned Dynamics for Agile UAV Manoeuvering</h3>
+            <p class="research-meta">Satyajit et al. · arXiv · 2024</p>
+            <p class="research-abstract">A lightweight neural network surrogate for UAV aerodynamics integrated into a receding-horizon MPC framework, enabling real-time aggressive flight on a 250 g quadrotor platform.</p>
+            <div class="research-tags">
+              <span class="research-tag">Robotics</span>
+              <span class="research-tag">Control Theory</span>
+              <span class="research-tag">ML</span>
+            </div>
+            <div class="research-links">
+              <a href="#" class="research-link" aria-label="PDF"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i> PDF</a>
+              <a href="#" class="research-link" aria-label="arXiv"><i class="fa-solid fa-link" aria-hidden="true"></i> arXiv</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section-padding" aria-label="Contact">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Get in touch</span>
+          <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+          <p class="section-subtitle">Whether you have a project idea, research collaboration, or just want to chat — I'd love to hear from you.</p>
+        </div>
+        <div class="contact-grid">
+
+          <div class="contact-info reveal-left">
+            <h3>Say Hello 👋</h3>
+            <p>I'm always open to interesting conversations, collaboration opportunities, and new challenges. Drop me a message and I'll get back to you as soon as possible.</p>
+            <ul class="contact-list">
+              <li class="contact-item">
+                <div class="contact-icon"><i class="fa-solid fa-envelope" aria-hidden="true"></i></div>
+                <div>
+                  <p class="contact-item-label">Email</p>
+                  <a href="mailto:satyajit@example.com" class="contact-item-value">satyajit@example.com</a>
+                </div>
+              </li>
+              <li class="contact-item">
+                <div class="contact-icon"><i class="fa-brands fa-github" aria-hidden="true"></i></div>
+                <div>
+                  <p class="contact-item-label">GitHub</p>
+                  <a href="https://github.com/HSatyajit95" class="contact-item-value" target="_blank" rel="noopener noreferrer">github.com/HSatyajit95</a>
+                </div>
+              </li>
+              <li class="contact-item">
+                <div class="contact-icon"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></div>
+                <div>
+                  <p class="contact-item-label">LinkedIn</p>
+                  <a href="https://www.linkedin.com/in/hsatyajit95" class="contact-item-value" target="_blank" rel="noopener noreferrer">linkedin.com/in/hsatyajit95</a>
+                </div>
+              </li>
             </ul>
+            <div class="social-row">
+              <a href="https://github.com/HSatyajit95" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+              <a href="https://www.linkedin.com/in/hsatyajit95" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+              <a href="https://twitter.com/HSatyajit95" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="Twitter/X"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+              <a href="mailto:satyajit@example.com" class="social-btn" aria-label="Email"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
+            </div>
+          </div>
+
+          <div class="reveal-right">
+            <form id="contact-form" class="contact-form" novalidate aria-label="Contact form">
+              <div class="form-row">
+                <div class="form-group" id="group-name">
+                  <label for="name">Your Name</label>
+                  <input type="text" id="name" name="name" placeholder="John Doe" aria-label="Your name" autocomplete="name" />
+                  <span class="form-error" role="alert"></span>
+                </div>
+                <div class="form-group" id="group-email">
+                  <label for="email">Email Address</label>
+                  <input type="email" id="email" name="email" placeholder="john@example.com" aria-label="Your email address" autocomplete="email" />
+                  <span class="form-error" role="alert"></span>
+                </div>
+              </div>
+              <div class="form-group" id="group-subject">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="Project collaboration / Research inquiry…" aria-label="Message subject" />
+                <span class="form-error" role="alert"></span>
+              </div>
+              <div class="form-group" id="group-message">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or idea…" aria-label="Your message"></textarea>
+                <span class="form-error" role="alert"></span>
+              </div>
+              <button type="submit" class="btn-submit">
+                <i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Send Message
+              </button>
+              <div id="form-success" class="form-success" role="status" aria-live="polite">
+                <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                Thank you! Your message has been sent. I'll get back to you soon.
+              </div>
+            </form>
+          </div>
+
         </div>
+      </div>
     </section>
 
-    <footer>
-        <p>&copy; 2026 Satyajit. All rights reserved.</p>
-    </footer>
+  </main>
+
+  <!-- Footer -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#home" class="footer-logo" aria-label="Back to top">S.</a>
+          <p class="footer-tagline">Building intelligent robotic systems at the intersection of mathematics, computer vision, and autonomous engineering.</p>
+          <nav class="footer-social" aria-label="Social media links">
+            <a href="https://github.com/HSatyajit95" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/in/hsatyajit95" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+            <a href="https://twitter.com/HSatyajit95" target="_blank" rel="noopener noreferrer" aria-label="Twitter/X"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+            <a href="mailto:satyajit@example.com" aria-label="Email"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Projects</h4>
+          <ul>
+            <li><a href="#projects">IP Chain — IUWT</a></li>
+            <li><a href="#projects">ROS2 Navigation</a></li>
+            <li><a href="#projects">CV Pipeline</a></li>
+            <li><a href="#projects">CUDA SLAM</a></li>
+            <li><a href="#projects">Drone Control</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; <span id="year"></span> <span>Satyajit</span>. All rights reserved.</p>
+        <p class="footer-made">Built with <span style="color:#ff006e;">♥</span> &amp; lots of ☕</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="js/script.js"></script>
+
 </body>
 </html>
