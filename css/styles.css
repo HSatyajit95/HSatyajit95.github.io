@@ -721,6 +721,19 @@ section {
   background: var(--gradient-primary);
 }
 
+.project-card-video-top {
+  height: 160px;
+  overflow: hidden;
+  position: relative;
+}
+
+.project-card-video-top video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .project-card:nth-child(2) .project-card-top { background: var(--gradient-secondary); }
 .project-card:nth-child(3) .project-card-top { background: linear-gradient(135deg, var(--accent-pink), var(--accent-cyan)); }
 .project-card:nth-child(4) .project-card-top { background: var(--gradient-secondary); }
@@ -1058,7 +1071,38 @@ section {
 }
 
 /* ----------------------------------------------------------
-   14. Contact Section
+   14. Resume Section
+   ---------------------------------------------------------- */
+#resume {
+  background: var(--bg-secondary);
+  padding: var(--section-padding);
+}
+
+.resume-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.resume-viewer {
+  width: 100%;
+  height: 820px;
+  border: 1px solid var(--glass-border);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  background: var(--bg-tertiary);
+}
+
+.resume-viewer iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+/* ----------------------------------------------------------
+   15. Contact Section
    ---------------------------------------------------------- */
 #contact {
   background: var(--bg-secondary);
@@ -1541,5 +1585,9 @@ footer {
 
   .contact-form {
     padding: 24px 20px;
+  }
+
+  .resume-viewer {
+    height: 600px;
   }
 }

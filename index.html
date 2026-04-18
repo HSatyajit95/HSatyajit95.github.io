@@ -29,6 +29,7 @@
         <li><a href="#projects">Projects</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#research">Research</a></li>
+        <li><a href="#resume">Resume</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <button class="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
@@ -288,7 +289,12 @@
           </article>
 
           <article class="project-card reveal">
-            <div class="project-card-top"></div>
+            <div class="project-card-top project-card-video-top">
+              <video autoplay muted loop playsinline aria-label="Forward and Inverse Kinematics simulation preview">
+                <source src="https://raw.githubusercontent.com/HSatyajit95/Forward-and-Inverse-Kinematics/main/simulation.mp4" type="video/mp4" />
+                Simulation preview not available.
+              </video>
+            </div>
             <div class="project-card-body">
               <div class="project-icon"><i class="fa-solid fa-robot" aria-hidden="true"></i></div>
               <h3 class="project-title">Forward &amp; Inverse Kinematics</h3>
@@ -464,6 +470,28 @@
       </div>
     </section>
 
+    <!-- Resume -->
+    <section id="resume" class="section-padding" aria-label="Resume">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">My credentials</span>
+          <h2 class="section-title">My <span class="gradient-text">Resume</span></h2>
+          <p class="section-subtitle">A snapshot of my education, experience, and skills. Download the PDF for a complete version.</p>
+        </div>
+        <div class="resume-actions reveal">
+          <a href="assets/cv.pdf" class="btn btn-primary" download>
+            <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i> Download PDF
+          </a>
+          <a href="assets/cv.pdf" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Open in New Tab
+          </a>
+        </div>
+        <div class="resume-viewer reveal">
+          <iframe src="assets/cv.pdf" title="Satyajit Resume"></iframe>
+        </div>
+      </div>
+    </section>
+
     <!-- Contact -->
     <section id="contact" class="section-padding" aria-label="Contact">
       <div class="container">
@@ -570,6 +598,7 @@
             <li><a href="#projects">Projects</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#research">Research</a></li>
+            <li><a href="#resume">Resume</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
