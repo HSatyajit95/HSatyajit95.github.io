@@ -1,0 +1,335 @@
+\documentclass[a4paper,10pt]{article}
+
+% ─── Packages ───────────────────────────────────────────────────────────────
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{ragged2e}
+\usepackage{xcolor}
+\usepackage{geometry}
+\usepackage{amssymb}
+\input{glyphtounicode}
+
+% ─── Geometry ────────────────────────────────────────────────────────────────
+\geometry{
+  a4paper,
+  top=0.40in,
+  bottom=0.40in,
+  left=0.48in,
+  right=0.48in
+}
+
+% ─── Color Palette ───────────────────────────────────────────────────────────
+\definecolor{AccentBlue}{RGB}{30, 90, 180}
+\definecolor{DarkNavy}{RGB}{15, 30, 80}
+\definecolor{MidBlue}{RGB}{50, 110, 200}
+\definecolor{SlateGray}{RGB}{88, 98, 115}
+\definecolor{RuleGray}{RGB}{180, 190, 205}
+
+% ─── Page Style ──────────────────────────────────────────────────────────────
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\footskip}{12pt}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\setlength{\parindent}{0pt}
+
+% ─── Section Heading Style ───────────────────────────────────────────────────
+\titleformat{\section}{
+  \vspace{-6pt}\color{AccentBlue}\large\bfseries\raggedright
+}{}{0em}{}[{\color{RuleGray}\titlerule[0.6pt]}\vspace{-4pt}]
+
+% ─── Custom Commands ─────────────────────────────────────────────────────────
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item[]
+  \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    {\color{DarkNavy}\textbf{\normalsize #1}} & {\color{SlateGray}\small\textit{#2}} \\
+    {\color{MidBlue}\textit{\small #3}} & {\color{SlateGray}\small #4} \\
+  \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+  \vspace{-2pt}\item[]
+  \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \small #1 & {\color{SlateGray}\small #2} \\
+  \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeItem}[1]{
+  \item\small{#1\vspace{-2pt}}
+}
+
+\newcommand{\resumeLabelItem}[2]{
+  \item\small{{\color{MidBlue}\textbf{#1}}\ #2\vspace{-2pt}}
+}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.18in, itemsep=0.5pt, topsep=2pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-3pt}}
+
+\renewcommand{\labelitemi}{\textcolor{AccentBlue}{\scriptsize$\blacksquare$}}
+
+\pdfgentounicode=1
+
+% ─────────────────────────────────────────────────────────────────────────────
+\begin{document}
+
+% ╔══════════════════════════════════════════════════════╗
+%   HEADER
+% ╚══════════════════════════════════════════════════════╝
+\begin{center}
+  {\Huge\bfseries\color{DarkNavy} SATYAJIT HALDER}\\[3pt]
+  {\large\color{AccentBlue}\textbf{Robotics Software Engineer}}\\[4pt]
+  \small\textcolor{SlateGray}{
+    \faPhone\ +91-6297964646 \quad
+    \href{mailto:satyajithalder806@gmail.com}{\faEnvelope\ satyajithalder806@gmail.com} \quad
+    \href{https://www.linkedin.com/in/hsatyajit25/}{\faLinkedin\ linkedin.com/in/hsatyajit25} \quad
+    \href{https://github.com/HSatyajit95}{\faGithub\ github.com/HSatyajit95}
+  }
+\end{center}
+
+\vspace{-4pt}
+
+% ╔══════════════════════════════════════════════════════╗
+%   PROFESSIONAL SUMMARY
+% ╚══════════════════════════════════════════════════════╝
+\section{Professional Summary}
+\small\color{SlateGray}
+Robotics Software Engineer with \textbf{3+ years} building \textbf{real-time, multithreaded C++ systems, robot task lifecycle state machines, and fleet-level coordination software} for autonomous robots. Deep expertise in \textbf{Modern C++ concurrency, TCP/IP socket communication, behavior trees (BehaviorTree.CPP), and high-frequency task allocation}. Hands-on experience with \textbf{ROS\,2, Nav2, RabbitMQ, MongoDB, gRPC, REST APIs, Docker, and event-driven backend architectures} through professional and independent \textbf{AMR/AGV warehouse automation} projects. MS from \textbf{IIT Madras}. Seeking to bring real-time systems depth to large-scale \textbf{Fleet Management System (FMS)} development for intralogistics.
+
+\vspace{-2pt}
+
+% ╔══════════════════════════════════════════════════════╗
+%   SKILLS
+% ╚══════════════════════════════════════════════════════╝
+\section{Technical Skills}
+
+\begin{tabular*}{\textwidth}{@{}p{0.21\textwidth} p{0.75\textwidth}@{}}
+
+  \textcolor{MidBlue}{\textbf{Languages}} &
+  Modern C++17 (STL, templates, RAII), multithreading \& concurrency (mutexes, condition variables, atomics, thread pools, synchronization), Python (scripting \& automation, NumPy, OpenCV, FastAPI), MATLAB, C \\[2.5pt]
+
+  \textcolor{MidBlue}{\textbf{Real-Time \& Control}} &
+  Deterministic control loops ($<$1\,ms), state machine design, behavior tree architecture (BehaviorTree.CPP), PID / nonlinear control, trajectory planning, fault recovery, emergency stop systems \\[2.5pt]
+
+  \textcolor{MidBlue}{\textbf{Robotics \& Autonomy}} &
+  ROS\,2 (Humble/Iron), Gazebo, RViz2, Nav2, SLAM Toolbox, A*/Dijkstra/RRT/RRT* path planning, navigation \& localization, AMR/AGV fleet coordination, task allocation, multi-robot traffic management concepts, 6-DoF manipulation, DLS inverse kinematics, Ruckig motion planning \\[2.5pt]
+
+  \textcolor{MidBlue}{\textbf{Backend \& Architecture}} &
+  Scalable backend services, event-driven architecture, distributed systems design, RabbitMQ (message brokering), MongoDB, REST API development, microservice patterns (Docker Compose) \\[2.5pt]
+
+  \textcolor{MidBlue}{\textbf{Communication \& Integration}} &
+  TCP/IP socket programming, robot-to-server protocols, gRPC / Protocol Buffers, CAN bus, OPC UA (familiar), WCS / WES / ERP integration patterns, PLC, conveyor \& lift integration concepts (industrial automation \& intralogistics) \\[2.5pt]
+
+  \textcolor{MidBlue}{\textbf{Computer Vision \& AI}} &
+  Stereo calibration ($<$50\,\textmu m), 3D point clouds (Open3D), depth estimation, YOLOv3, PyTorch, ONNX, CUDA \\[2.5pt]
+
+  \textcolor{MidBlue}{\textbf{Dev Tools \& Platforms}} &
+  Linux/Ubuntu, Git (GitFlow, code reviews), CMake, CPack, Docker, gTest/cTest, CI/CD (GitHub Actions, Jenkins -- familiar), NSIS (installer packaging), GDB \& production debugging, GitHub Copilot / Claude Code, technical documentation \\[2.5pt]
+
+  \textcolor{MidBlue}{\textbf{CAD / CAE}} &
+  SOLIDWORKS, CATIA, CREO, ANSYS \\[2.5pt]
+
+  \textcolor{MidBlue}{\textbf{Soft Skills}} &
+  Technical leadership, cross-functional collaboration, code review, ownership \& accountability, goal-oriented execution, mentorship
+
+\end{tabular*}
+
+\vspace{-2pt}
+
+% ╔══════════════════════════════════════════════════════╗
+%   PROJECTS
+% ╚══════════════════════════════════════════════════════╝
+\section{Projects}
+
+\resumeSubHeadingListStart
+
+  % ── PROJECT 1: FMS ──────────────────────────────────
+  \resumeProjectHeading
+    {\textbf{\color{DarkNavy}Multi-Robot Fleet Management System (FMS) Simulator} \hfill \textcolor{SlateGray}{\small 2026 -- Present}}{}
+  \vspace{-10pt}
+  \resumeProjectHeading
+    {\textcolor{MidBlue}{\small ROS\,2 $\cdot$ Gazebo $\cdot$ Nav2 $\cdot$ BehaviorTree.CPP $\cdot$ C++ $\cdot$ gRPC $\cdot$ MongoDB $\cdot$ RabbitMQ $\cdot$ Docker}}{}
+  \resumeItemListStart
+    \resumeItem{Designed and implemented a \textbf{multi-robot fleet management system} in simulation coordinating \textbf{4 differential-drive AMRs} across a custom Gazebo warehouse environment, replicating real-world FMS architecture.}
+    \resumeItem{Built a \textbf{C++ fleet controller} using \textbf{BehaviorTree.CPP} for hierarchical task allocation — assigning pick, transport, and drop tasks to robots based on proximity, battery state, and queue priority with \textbf{sub-100\,ms dispatch latency}.}
+    \resumeItem{Implemented \textbf{per-robot state machines} managing full task lifecycles: idle $\rightarrow$ assigned $\rightarrow$ navigating $\rightarrow$ executing $\rightarrow$ reporting $\rightarrow$ recovery, with deterministic fault isolation and auto-recovery on Nav2 failures.}
+    \resumeItem{Developed a \textbf{gRPC-based fleet server} (Protocol Buffers) for robot-to-server status reporting and command streaming; exposed a \textbf{REST API} (Python FastAPI) for external fleet status queries and task injection — mirroring WCS/ERP integration patterns.}
+    \resumeItem{Integrated \textbf{RabbitMQ} as a task message broker for decoupled task queuing between the fleet controller and individual robot agents; used \textbf{MongoDB} for persistent task logging, robot telemetry, and completion records.}
+    \resumeItem{Wrote \textbf{gTest/cTest unit and integration tests} for the fleet scheduler, state machine transitions, and BT node logic; automated with \textbf{CMake + CPack} build system and \textbf{GitHub Actions CI/CD} pipeline.}
+    \resumeItem{Containerized the entire stack (fleet server, message broker, database, ROS\,2 nodes) using \textbf{Docker Compose} for reproducible deployment and \textbf{field acceptance testing} of the integrated system.}
+  \resumeItemListEnd
+
+  \vspace{3pt}
+
+  % ── PROJECT 2: Nav2 ──────────────────────────────────
+  \resumeProjectHeading
+    {\textbf{\color{DarkNavy}Nav2 Autonomous Navigation with Custom Behavior Tree Plugins} \hfill \textcolor{SlateGray}{\small 2026}}{}
+  \vspace{-10pt}
+  \resumeProjectHeading
+    {\textcolor{MidBlue}{\small ROS\,2 $\cdot$ Nav2 $\cdot$ Gazebo $\cdot$ SLAM Toolbox $\cdot$ BehaviorTree.CPP $\cdot$ C++ $\cdot$ gTest}}{}
+  \resumeItemListStart
+    \resumeItem{Deployed a \textbf{full Nav2 autonomous navigation stack} on a simulated differential-drive robot in Gazebo, including SLAM Toolbox for online map building, AMCL localization, and costmap configuration for static and dynamic obstacle layers.}
+    \resumeItem{Developed \textbf{custom BehaviorTree.CPP action and condition nodes} as Nav2 plugins — implementing adaptive waypoint following, zone-based speed regulation, and dynamic goal cancellation triggered by occupancy grid updates.}
+    \resumeItem{Tuned \textbf{DWB local planner} and \textbf{Regulated Pure Pursuit} controller parameters for smooth navigation in narrow-aisle warehouse layouts; implemented custom recovery behaviors (spin, backup, replan) as state machine nodes.}
+    \resumeItem{Built a \textbf{Python-based mission executor} using Nav2 Simple Commander API to dispatch multi-waypoint patrol and delivery missions; integrated with ROS\,2 action servers for asynchronous goal monitoring and preemption.}
+    \resumeItem{Validated navigation performance with \textbf{gTest-based automated tests} replaying rosbag trajectories and asserting localization error bounds; documented all BT node interfaces and planner parameters in a structured technical wiki.}
+  \resumeItemListEnd
+
+  \vspace{3pt}
+
+  % ── PROJECT 3: Real-Time Task Scheduler ──────────────
+  \resumeProjectHeading
+    {\textbf{\color{DarkNavy}Real-Time Multi-Agent Task Scheduler} \hfill \textcolor{SlateGray}{\small 2025}}{}
+  \vspace{-10pt}
+  \resumeProjectHeading
+    {\textcolor{MidBlue}{\small C++17 $\cdot$ gRPC $\cdot$ Protocol Buffers $\cdot$ MongoDB $\cdot$ RabbitMQ $\cdot$ Docker $\cdot$ GitHub Actions $\cdot$ gTest}}{}
+  \resumeItemListStart
+    \resumeItem{Built a \textbf{deterministic real-time task scheduling engine} in C++17 for coordinating multiple software agents — implementing a \textbf{priority-based task queue, preemptive state machine dispatcher}, and deadline-aware execution monitor with configurable scheduling policies.}
+    \resumeItem{Designed a \textbf{gRPC service layer} (Protocol Buffers schema) for inter-agent communication — enabling agents to register, report status, and receive task assignments with \textbf{low-latency RPC calls} ($<$5\,ms round-trip in local testing).}
+    \resumeItem{Integrated \textbf{RabbitMQ} for asynchronous task event streaming and \textbf{MongoDB} for persistent agent state, task history, and performance metrics; exposed a \textbf{REST API} for external task submission and monitoring dashboard.}
+    \resumeItem{Achieved \textbf{100\% unit test coverage} of scheduling logic and state machine transitions using \textbf{gTest}; packaged with \textbf{CMake + CPack}, containerized with \textbf{Docker}, and automated via \textbf{GitHub Actions CI/CD} with build, test, and packaging stages.}
+  \resumeItemListEnd
+
+  \vspace{3pt}
+
+  % ── PROJECT 4: Path Planning Library ──────────────────
+  \resumeProjectHeading
+    {\textbf{\color{DarkNavy}Mobile Robot Path Planning \& Kinematics Library} \hfill \textcolor{SlateGray}{\small 2024 -- 2025}}{}
+  \vspace{-10pt}
+  \resumeProjectHeading
+    {\textcolor{MidBlue}{\small C++17 $\cdot$ CMake $\cdot$ CPack $\cdot$ gTest $\cdot$ GitHub Actions $\cdot$ Python (pybind11)}}{}
+  \resumeItemListStart
+    \resumeItem{Developed an \textbf{open-source C++ path planning library} implementing \textbf{A*, Dijkstra, RRT, and RRT*} on occupancy grids and continuous configuration spaces, with Python bindings via pybind11 for rapid prototyping.}
+    \resumeItem{Extended existing \textbf{DLS-based inverse kinematics solver} (from professional work) into a standalone library supporting both \textbf{serial manipulators and differential-drive mobile robot kinematic models} — enabling unified path and motion planning.}
+    \resumeItem{Benchmarked planners across map sizes (100$\times$100 to 2000$\times$2000 grids) using \textbf{gTest performance fixtures}; documented results in a structured README with complexity analysis and tuning guidelines. Published on GitHub with \textbf{CI/CD via GitHub Actions}.}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\vspace{-2pt}
+
+% ╔══════════════════════════════════════════════════════╗
+%   WORK EXPERIENCE
+% ╚══════════════════════════════════════════════════════╝
+\section{Work Experience}
+
+\resumeSubHeadingListStart
+
+  % ── Transasia ───────────────────────────────────────
+  \resumeSubheading
+    {Transasia Bio-Medicals Ltd.}{April 2024 -- Present}
+    {R\&D Engineer \textemdash{} Robotics \& Real-Time Systems}{Bangalore, India}
+
+  \resumeItemListStart
+    \resumeLabelItem{Real-Time Robot Control Framework (C++, Maxon EPOS):}{
+      Engineered a \textbf{deterministic real-time control framework} for a 6-DoF serial manipulator with Maxon EPOS motor controllers. Designed \textbf{TCP/IP and CAN/USB communication layers} for sub-millisecond command execution and high-frequency feedback. Implemented \textbf{joint-space control pipelines, multi-axis synchronization, and safety-critical task lifecycle management} including emergency stop, fault detection, and recovery state machines. Leveraged \textbf{GitHub Copilot and Claude Code} to accelerate unit test writing and technical documentation.}
+
+    \resumeLabelItem{State Machine \& Task Lifecycle Architecture:}{
+      Designed \textbf{hierarchical state machine architectures} governing complex multi-step robot task lifecycles (idle $\rightarrow$ pre-position $\rightarrow$ execute $\rightarrow$ validate $\rightarrow$ recovery) with deterministic transitions and fault isolation. Structured architecture to align with \textbf{behavior tree design principles} for modular, reusable task management compatible with BehaviorTree.CPP patterns.}
+
+    \resumeLabelItem{Custom Kinematics \& Motion Planning Engine (C++):}{
+      Developed \textbf{custom DLS-based inverse kinematics} and trajectory planning algorithms in C++, outperforming Pinocchio on a Renesas RZ/V2L SBC. Integrated \textbf{Ruckig motion planning library} for jerk-limited trajectory generation; developing an offline trajectory planner to eliminate runtime dependencies.}
+
+    \resumeLabelItem{Modular C++ Architecture, Testing \& Documentation:}{
+      Prototyped in Python, then \textbf{ported and optimized to C++} for constrained hardware deployment. Built a \textbf{CMake-based testing and validation suite} for system bring-up, calibration, and multi-axis coordination — functioning as unit and \textbf{field acceptance test harness}. Maintained structured \textbf{technical documentation} of all algorithms, interfaces, and system changes.}
+
+    \resumeLabelItem{Vision-Guided Manipulation \& 3D Perception:}{
+      Designed end-to-end pipeline: stereo camera calibration ($<$50\,\textmu m), eye-to-hand calibration, Unimatch-based 3D point cloud construction, novel \textbf{surface normal estimation} for object pose detection, and autonomous navigation to target for precise insertion.}
+  \resumeItemListEnd
+
+  \vspace{3pt}
+
+  % ── IIT Madras ICSR ──────────────────────────────────
+  \resumeSubheading
+    {ICSR, IIT Madras}{August 2023 -- March 2024}
+    {Project Associate \textemdash{} Robotics \& Computer Vision}{Chennai, Tamil Nadu}
+
+  \resumeItemListStart
+    \resumeLabelItem{Project:}{\textbf{Robotic Ingot Handling System for Hazardous Environment (BARC).}}
+    \resumeItem{Developed \textbf{YOLOv3-based 3D localization} using Intel RealSense D455 — mapping bounding boxes to depth frames for ingot pose estimation via Open3D point cloud reconstruction.}
+    \resumeItem{Designed \textbf{patentable form-closure gripper} and integrated detection, EoT crane control, and Python GUI into a complete demonstration system validated at IIT Madras.}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\vspace{-2pt}
+
+% ╔══════════════════════════════════════════════════════╗
+%   RESEARCH EXPERIENCE
+% ╚══════════════════════════════════════════════════════╝
+\section{Research Experience}
+
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {MS Research \textemdash{} IIT Madras}{January 2019 -- March 2024}
+    {Research Scholar, Dept.\ of Mechanical Engineering}{Chennai, Tamil Nadu}
+  \resumeItemListStart
+    \resumeLabelItem{Biomechanical Motion Optimization:}{
+      Formulated optimization problems predicting sit-to-stand trajectories, minimizing integrated joint torques across five actuated joints. Developed simulation framework validating assistive motion models.}
+    \resumeLabelItem{Sit-to-Stand Assistive Device (Patented, 2024):}{
+      Designed two device variants using four-bar linkage synthesis and double-parallelogram scissor mechanisms with linear actuators. Validated on volunteers \textemdash{} \textbf{45\% reduction in ground reaction force}.}
+  \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\vspace{-2pt}
+
+% ╔══════════════════════════════════════════════════════╗
+%   EDUCATION
+% ╚══════════════════════════════════════════════════════╝
+\section{Education}
+
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Indian Institute of Technology, Madras}{2024}
+    {MS in Mechanical Engineering (Robotics \& Dynamics)}{Chennai, Tamil Nadu}
+  \resumeSubheading
+    {Government College of Engineering and Textile Technology, Berhampore}{2018}
+    {B.Tech in Mechanical Engineering}{Berhampore, West Bengal}
+\resumeSubHeadingListEnd
+
+\vspace{-2pt}
+
+% ╔══════════════════════════════════════════════════════╗
+%   ACHIEVEMENTS & CERTIFICATIONS
+% ╚══════════════════════════════════════════════════════╝
+\section{Achievements \& Certifications}
+
+\resumeItemListStart
+  \resumeLabelItem{Patent (2024):}{Sit-to-stand assistive device \textemdash{} IIT Madras.}
+  \resumeLabelItem{First Prize:}{Students Mechanism and Design Competition (SMDC), IIT Mandi, 2019.}
+  \resumeLabelItem{Machine Learning A-Z}{--- Udemy, 2023.}
+  \resumeLabelItem{Deep Learning A-Z}{--- Udemy, 2023.}
+  \resumeLabelItem{Data Structures \& Algorithms (C/C++)}{--- Udemy, 2022.}
+  \resumeLabelItem{Python for Data Science}{--- Great Learning, 2022.}
+\resumeItemListEnd
+
+\vspace{-2pt}
+
+% ╔══════════════════════════════════════════════════════╗
+%   PUBLICATIONS
+% ╚══════════════════════════════════════════════════════╝
+\section{Publications}
+
+\resumeItemListStart
+  \resumeItem{``Design and Development of a Mobile Sit-to-Stand Assistive Device,'' \textit{Journal of The Institution of Engineers (India): Series C}, Vol.\,105, pp.\,299--312, 2024.}
+  \resumeItem{``Design and Development of a Sit-to-Stand Assistive Device,'' \textit{Machines, Mechanism and Robotics}, Proceedings of iNaCoMM 2019.}
+\resumeItemListEnd
+
+\end{document}
